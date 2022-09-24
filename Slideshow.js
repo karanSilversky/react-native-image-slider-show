@@ -265,7 +265,7 @@ export default class Slideshow extends Component {
         <View 
           style={[
             layoutArrow(this.props.height, this.props.arrowSize), 
-            { left: 10, height: 50 },
+            { left: 0, height: '100%', backgroundColor: '#00000030' },
           ]}>
           <TouchableOpacity
             onPress={() => this._prev()}>
@@ -286,7 +286,7 @@ export default class Slideshow extends Component {
         <View 
           style={[
             layoutArrow(this.props.height, this.props.arrowSize), 
-            { right: 10, height: 50 },
+            { right: 0, height: '100%', backgroundColor: '#00000030' },
           ]}>
           <TouchableOpacity
             onPress={() => this._next()}>
@@ -356,10 +356,10 @@ const layoutArrow = function (imageHeight, iconHeight) {
   return {
     position: 'absolute',
     backgroundColor: 'transparent',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    top: (imageHeight-iconHeight)/2,
-    bottom: (imageHeight-iconHeight)/2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    //top: (imageHeight-iconHeight)/2,
+    //bottom: (imageHeight-iconHeight)/2,
   };
 }
 
