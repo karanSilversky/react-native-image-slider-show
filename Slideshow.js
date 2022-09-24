@@ -36,10 +36,11 @@ const styles = StyleSheet.create({
   },
   indicator: {
     margin: 3,
-    opacity: 0.9
+    opacity: 0.9,
   },
   indicatorSelected: {
     opacity: 1,
+    width:25,
   },
   containerImage : {
     flex: 1,
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     opacity: 0.5,
-    backgroundColor: 'black',
+    backgroundColor: '#5F5F5F',
   },
   layoutText: {
     position: 'absolute',
