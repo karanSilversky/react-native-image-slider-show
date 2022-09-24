@@ -36,10 +36,11 @@ const styles = StyleSheet.create({
   },
   indicator: {
     margin: 3,
-    opacity: 0.9
+    opacity: 0.9,
   },
   indicatorSelected: {
     opacity: 1,
+    width:25,
   },
   containerImage : {
     flex: 1,
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     opacity: 0.5,
-    backgroundColor: 'black',
+    backgroundColor: '#5F5F5F',
   },
   layoutText: {
     position: 'absolute',
@@ -264,7 +265,7 @@ export default class Slideshow extends Component {
         <View 
           style={[
             layoutArrow(this.props.height, this.props.arrowSize), 
-            { left: 10, height: 50 },
+            {left:0, height: '100%', backgroundColor:'#00000025' },
           ]}>
           <TouchableOpacity
             onPress={() => this._prev()}>
@@ -285,7 +286,7 @@ export default class Slideshow extends Component {
         <View 
           style={[
             layoutArrow(this.props.height, this.props.arrowSize), 
-            { right: 10, height: 50 },
+            {right:0, height: '100%', backgroundColor:'#00000025' },
           ]}>
           <TouchableOpacity
             onPress={() => this._next()}>
@@ -355,10 +356,10 @@ const layoutArrow = function (imageHeight, iconHeight) {
   return {
     position: 'absolute',
     backgroundColor: 'transparent',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    top: (imageHeight-iconHeight)/2,
-    bottom: (imageHeight-iconHeight)/2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // top: (imageHeight-iconHeight)/2,
+    // bottom: (imageHeight-iconHeight)/2,
   };
 }
 
